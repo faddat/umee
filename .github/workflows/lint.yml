@@ -23,13 +23,13 @@ jobs:
           go-version: 1.19
           cache: true
       - name: golangci-lint main
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v9
         if: env.GIT_DIFF
         with:
           version: latest
           args: --timeout 8m
       - name: golangci-lint pricefeeder
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v9
         if: ${{ contains(env.GIT_DIFF, 'price-feeder/')  }}
         with:
           version: latest
