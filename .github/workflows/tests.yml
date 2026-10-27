@@ -15,7 +15,7 @@ jobs:
           go-version: 1.19
       - name: Display Go Version
         run: go version
-      - uses: actions/cache@v3
+      - uses: actions/cache@v6
         id: cache-go-tparse
         with:
           path: ~/go/bin
@@ -163,7 +163,7 @@ jobs:
           path: ./build
 
       - name: cache umeed mainnet
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         id: umeed-v112
         with:
           path: ./contrib/scripts/umeed-releases/umeed-v1.1.2-linux-amd64/umeed
@@ -173,7 +173,7 @@ jobs:
         run: |
           ./contrib/scripts/download-mainnet-umeed.sh
       - name: cache mainnet tinkered genesis
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         id: tinkered-genesis-sep-15
         with:
           path: ./contrib/scripts/mainnet_tinkered_genesis.json
