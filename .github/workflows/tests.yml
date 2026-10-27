@@ -126,7 +126,7 @@ jobs:
 
       - name: gets umeed bin
         if: env.GIT_DIFF
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v8
         with:
           name: umeed-linux-amd64
           path: ./build
@@ -157,7 +157,7 @@ jobs:
 
       - name: gets umeed bin
         if: env.GIT_DIFF
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v8
         with:
           name: umeed-linux-amd64
           path: ./build
